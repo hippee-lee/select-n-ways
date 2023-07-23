@@ -1,0 +1,24 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2020", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@mh/select": ["libs/wc-select/src/index.ts"],
+      "@select-four-ways/ng-select": ["libs/ng-select/src/index.ts"],
+      "@select-four-ways/react-select": ["libs/react-select/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

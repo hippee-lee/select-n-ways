@@ -1,0 +1,39 @@
+{
+  "name": "wc-select",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/wc-select/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/esbuild:esbuild",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/wc-select",
+        "main": "libs/wc-select/src/index.ts",
+        "tsConfig": "libs/wc-select/tsconfig.lib.json",
+        "assets": ["libs/wc-select/*.md"],
+        "generatePackageJson": true
+      }
+    },
+    "publish": {
+      "command": "node tools/scripts/publish.mjs wc-select {args.ver} {args.tag}",
+      "dependsOn": ["build"]
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/wc-select/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "outputs": ["coverage/libs/wc-select"],
+      "options": {
+        "passWithNoTests": true,
+        "reportsDirectory": "../../coverage/libs/wc-select"
+      }
+    }
+  },
+  "tags": []
+}
