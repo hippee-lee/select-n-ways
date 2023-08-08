@@ -1,13 +1,16 @@
 import { Component } from '@angular/core';
-import { NxWelcomeComponent } from './nx-welcome.component';
+import { NgSelectModule } from '@select-four-ways/ng-select';
+import { Movie, MOVIES } from "./movies";
+import { CommonModule } from '@angular/common';
 
 @Component({
   standalone: true,
-  imports: [NxWelcomeComponent],
+  imports: [CommonModule, NgSelectModule],
   selector: 'select-four-ways-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'ng-select-app';
+  movies = MOVIES;
+  selected?: Movie;
 }

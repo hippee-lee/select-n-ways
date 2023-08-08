@@ -2,7 +2,9 @@
   "name": "@select-four-ways/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "ng-select:dev": "nx serve ng-select-app"
+  },
   "private": true,
   "devDependencies": {
     "@angular-devkit/build-angular": "~16.1.0",

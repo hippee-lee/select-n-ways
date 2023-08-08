@@ -2,7 +2,7 @@
   "name": "ng-select",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/ng-select/src",
-  "prefix": "select-four-ways",
+  "prefix": "app",
   "tags": [],
   "projectType": "library",
   "targets": {

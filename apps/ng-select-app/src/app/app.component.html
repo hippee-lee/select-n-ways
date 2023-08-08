@@ -1,1 +1,26 @@
-<select-four-ways-nx-welcome></select-four-ways-nx-welcome>
+<h1>Write a <b>generic</b> select component</h1>
+<ul>
+  <li>It displays several options given by the application, with a black border.</li>
+  <li>The options could be anything the application wants them to be.</li>
+  <li>The user can click any of the options to select it.</li>
+  <li>The currently selected option's border is red.</li>
+  <li>The application can react to an option being selected.</li>
+  <li>The application can dynamically select an option.</li>
+</ul>
+
+<h1>Example of the select component to pick a movie</h1>
+
+<app-select [(selected)]="selected">
+  <app-option *ngFor="let movie of movies" [value]="movie">
+    <img [src]="movie.poster" [title]="movie.poster" [alt]="movie.poster">
+    <h2>{{movie.title}}</h2>
+    <p>{{movie.date}}</p>
+  </app-option>
+</app-select>
+
+<h1>Example of how the app can interact with the select component above</h1>
+
+<h3 *ngIf="selected">Currently playing {{selected?.title}}</h3>
+<p>
+  <button (click)="selected = movies[1]">Play Deadpool</button>
+</p>
