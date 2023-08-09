@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "ng-select:dev": "nx serve ng-select-app"
+    "ng-select:dev": "nx serve ng-select-app",
+    "react-select:dev": "nx serve react-select-app"
   },
   "private": true,
   "devDependencies": {

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Inject, Injectable, InjectionToken, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Inject, InjectionToken, Input, Output } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
 export const SELECTED = new InjectionToken('selected');
